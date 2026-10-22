@@ -1,4 +1,14 @@
 ### GET request to example server
 GET http://localhost:8080/RestWebApp/api/calcul/somme?a=2&b=3
-
 ###
+### Division par 0 (attendu 400)
+GET http://localhost:8080/RestWebApp/api/calcul/division?a=7&b=0
+
+### Produit PathParam (attendu 42)
+GET http://localhost:8080/RestWebApp/api/calcul/produit/6/7
+
+### D.3 : b absent
+GET http://localhost:8080/RestWebApp/api/calcul/somme?a=2
+
+### D.3 : a non entier
+GET http://localhost:8080/RestWebApp/api/calcul/somme?a=abc&b=3
